@@ -1,0 +1,16 @@
+---
+ - name: launch ex2 instance
+   hosts: localhost
+   connection: local
+   # gather_facts: false
+   tasks:
+           - name: launching ec2
+             amazon.aws.ec2_instance:
+                     name: "azadi"
+                     image_id: ami-076e3a557efe1aa9c
+                     instance_type: t2.micro
+                     region: ap-south-1
+#                     aws_access_key: AKIAYV7M2ZN7HVJZFBH6
+#                     aws_secret_key: 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
+                     
+

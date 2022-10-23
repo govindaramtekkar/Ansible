@@ -1,0 +1,13 @@
+- name: create user
+  user:
+          name: kalyani
+          state: present
+- name: install package
+  yum:
+          name: autofs
+          state: latest
+- name: create file
+  lineinfile:
+          path: /tmp/hello
+          line: hello world
+          create: yes  

@@ -1,0 +1,9 @@
+---
+ - name: create user
+   hosts: all
+   gather_facts: false
+   tasks:
+           - name: create user
+             user:
+                     name: sam
+                     state: absent

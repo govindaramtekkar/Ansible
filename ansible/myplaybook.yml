@@ -1,0 +1,14 @@
+---
+ - name: importing playbook
+   hosts: appsserver
+   tasks:
+           - name: create a file
+             file:
+                     path: /home/host1/grras.txt
+                     state: touch
+                     
+ - name: import playbook1
+   import_playbook: playbook1.yml
+
+ - name: import playbook2
+   import_playbook: playbook2.yml

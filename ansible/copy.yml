@@ -1,0 +1,8 @@
+---
+ - name: copy module
+   hosts: all
+   tasks:
+           - name: copy file from controde node to managed hosts
+             copy:
+                     src: /home/admin/project/myfile
+                     dest: /home/host1/demo2

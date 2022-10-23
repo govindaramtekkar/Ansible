@@ -1,0 +1,9 @@
+---
+ - name: copying file frome hosts to nodes
+   hosts: all
+   tasks:
+           - name: fetch file from managed hosts to controde node
+             fetch:
+                     src: /home/host1/mydemo2
+                     dest: /tmp/
+

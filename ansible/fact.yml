@@ -1,0 +1,10 @@
+---
+ - name: test facts
+   hosts: all
+   gather_facts: false
+   tasks:
+           - name: print host specific infor
+             debug:
+                     msg:
+                      -  "the ip address of {{ ansible_hostname }}" 
+                      - " {{ ansible_default_ipv4.address }}" 

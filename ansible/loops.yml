@@ -1,0 +1,27 @@
+---
+ - name: testing loops
+   hosts: all
+   tasks:
+           - name: create groups
+             group:
+                     name: "{{ item }}"
+                     state: present
+             loop:
+                     - database
+                     - testing
+                     - it
+                     - hr 
+           - name: create user by loop 
+             user:
+                     name: "{{ item.name }}"
+                     state: present            
+                     uid: "{{ item.uid }}"
+             loop:
+                     - name: nikita
+                       uid: 2327
+                     - name: shamli
+                       uid: 5050
+                     - name: sneha
+                       uid: 3030
+                     - name: rewati
+                       uid: 9090        

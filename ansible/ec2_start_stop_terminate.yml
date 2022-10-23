@@ -1,0 +1,11 @@
+---
+ - name: start, stop , terminate ec2
+   hosts: localhost
+   connection: local
+   tasks:
+           - name: start the instance
+             ec2_instance:
+                     region: ap-south-1
+                     instance_ids: 
+                       - i-0142465f761b2c667
+                     state: running

@@ -1,0 +1,6 @@
+---
+ - name: deploy a role
+   hosts: dbserver,appsserver
+   roles:
+           - apache
+       

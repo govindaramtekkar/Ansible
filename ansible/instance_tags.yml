@@ -1,0 +1,16 @@
+---
+ - name: instances with tags
+   hosts: localhost
+   connection: local
+   tasks:
+           - name: launch ec2
+             amazon.aws.ec2_instance:                  
+               name: "tayari"
+               instance_type: t2.micro
+               image_id: ami-05c8ca4485f8b138a
+               region: ap-south-1
+               #   wait: yes
+               security_group: default
+               tags:
+                     name: dekh
+                     env: dev

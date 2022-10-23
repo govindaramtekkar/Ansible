@@ -1,0 +1,17 @@
+---
+ - name: this is my first play
+   hosts: all
+   tasks:
+      - name: my first ansible tasks create  user
+        user:
+           name: lio
+           state: present
+           uid: 2020
+           comment: tester
+           
+      - name: my second task create file
+        file:
+           path: /tmp/mydata
+           state: touch
+           mode: 0666
+               

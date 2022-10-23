@@ -1,0 +1,31 @@
+---
+# tasks file for apache
+- name: install {{ package }} package
+  yum:
+          name: "{{ package }}"
+          state: latest   
+- name: start enable service
+  service:
+          name: "{{ package }}"
+          state: started
+          enabled: yes
+- name: deploy index file
+  template:
+          src: index.j2
+          dest: /var/www/html/index.html
+          setype: httpd_sys_content_t
+- name: deploy configuration file
+  template:
+          src: conf.j2
+          dest: /etc/httpd/conf.d/apache.conf
+  notify: restart service        
+- name: create a user {{ client }}
+  user:
+          name: "{{ client }}"
+          state: present
+- name: copy data files
+  copy:
+          src: data
+          dest: /var/www/html/data  
+       
+

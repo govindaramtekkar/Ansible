@@ -1,0 +1,14 @@
+---
+ - name: lineinfile module
+   hosts: all
+   tasks:
+           - name: search word and change line
+             lineinfile:
+                     path: /home/host1/demo2
+                     regexp: redhat
+                     line: hello world 
+           - name: create file and add line
+             lineinfile:
+                     path: /home/host1/mydemo2
+                     line: grras solution
+                     create: yes

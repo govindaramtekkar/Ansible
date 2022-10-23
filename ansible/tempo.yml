@@ -1,0 +1,8 @@
+---
+ - name: test template module
+   hosts: all
+   tasks:
+           - name: test jinja2 template
+             template:
+                     src: template.j2
+                     dest: /var/database

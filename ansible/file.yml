@@ -1,0 +1,16 @@
+---
+ - name: test file module
+   hosts: all
+   tasks:
+           - name: create empty file
+             file:
+                     path: /home/host1/test1
+                     state: touch  
+           - name: create directory
+             file:
+                     path: /home/host1/data1
+                     state: directory  
+
+
+
+

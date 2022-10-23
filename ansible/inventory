@@ -1,0 +1,8 @@
+[appsserver]
+ 172.31.38.64   
+ 
+[dbserver]
+172.31.43.102    
+
+# [localhost] 
+# root@172.31.42.168

@@ -1,0 +1,10 @@
+---
+ - name: test import module
+   hosts: appsserver
+   tasks:
+           - name: create a directory
+             file:
+                     path: /var/store
+                     state: directory
+           - name: import tasks in playbook
+             import_tasks: task.yml          

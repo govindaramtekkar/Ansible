@@ -1,0 +1,22 @@
+---
+ - name: test handlers
+   hosts: all
+   ignore_errors: yes
+   tasks:
+           
+           - name: installed httpd package
+             yum:
+                     name: httpd
+                     state: latest 
+             notify: start enable apache 
+           - name: create user
+             user:
+                     name: harish
+                     state: pres
+   handlers:
+           - name: start enable apache
+             service:
+                     name: httpd
+                     state: started
+                     enabled: yes
+                       

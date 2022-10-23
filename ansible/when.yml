@@ -1,0 +1,11 @@
+---
+ - name: test conditions
+   hosts: all
+   tasks:
+           - name: deploy application when architecture is 64 bit
+             yum:
+                     name: httpd
+                     state: present
+             when: ansible_architecture == 'x86_64'       
+
+                     

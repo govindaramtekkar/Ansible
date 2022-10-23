@@ -1,0 +1,10 @@
+---
+ - name: test synchronize modul
+   hosts: all
+   tasks:
+           - name: sync file from controlnode to managed hosts
+             synchronize:
+                     src: myfile
+                     dest: /home/host1/demo2
+
+
