@@ -10,7 +10,7 @@
                      image_id: ami-076e3a557efe1aa9c
                      instance_type: t2.micro
                      region: ap-south-1
-#                     aws_access_key: AKIAYV7M2ZN7HVJZFBH6
-#                     aws_secret_key: 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
+#                     aws_access_key: AKIAYV7
+#                     aws_secret_key: PYKGGPOlike
                      
 
