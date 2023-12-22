@@ -19,5 +19,5 @@ jobs:
           secret: ${{ github.TOKEN }}
           approvers: govindaramtekkar
           
-      - name: Deploy to production
-        run: echo deploying
+      - name: test
+        run: echo check status
